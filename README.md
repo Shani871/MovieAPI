@@ -64,26 +64,26 @@ A Django REST Framework-based Movie API that allows users to search, filter, and
 
 🖥️ Movie List Page Example (HTML)
 
-<form action="" method="get">
+     <form action="" method="get">
     <input type="search" name="movie_name" placeholder="Search Movies">
     <button type="submit">Search</button>
-</form>
+    </form>
 
-{% for movie_item in movie_object %}
+     {% for movie_item in movie_object %}
     <p>{{ movie_item.name }}</p>
-{% endfor %}
+    {% endfor %}
 
-{% if movie_object.has_previous %}
+    {% if movie_object.has_previous %}
     <a href="?page=1">First</a>
     <a href="?page={{ movie_object.previous_page_number }}">Previous</a>
-{% endif %}
+     {% endif %}
 
 Page: {{ movie_object.number }} of {{ movie_object.paginator.num_pages }}
 
-{% if movie_object.has_next %}
+     {% if movie_object.has_next %}
     <a href="?page={{ movie_object.next_page_number }}">Next</a>
     <a href="?page={{ movie_object.paginator.num_pages }}">Last</a>
-{% endif %}
+    {% endif %}
 
 📡 API Endpoints
 	•	List Movies: GET /api/movies/
