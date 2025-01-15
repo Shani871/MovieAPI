@@ -23,60 +23,43 @@ A Django REST Framework-based Movie API that allows users to search, filter, and
 
 ---
 
-## 📂 Project Structure
-
-```plaintext
-movie_api/
-├── movie_api/                  # Main project directory
-│   ├── settings.py             # Django project settings
-│   └── urls.py                 # Main URL routing
-├── movies/                     # App for movie handling
-│   ├── models.py               # Movie model definition
-│   ├── views.py                # DRF views for the API
-│   ├── serializers.py          # DRF serializers for movies
-│   ├── templates/              # HTML templates
-│   └── urls.py                 # App-level URL routing
-├── db.sqlite3                  # Default database file
-├── manage.py                   # Django management commands
-└── README.md                   # Project documentation
+ # Project documentation
 
 🎯 Setup and Installation
-	1.	Clone the Repository:
+	1.Clone the Repository:
 
-git clone https://github.com/username/movie-api.git
-cd movie-api
+      git clone https://github.com/username/movie-api.git
+      cd movie-api
 
+2. Create a Virtual Environment:
 
-	2.	Create a Virtual Environment:
+       python -m venv venv
+       source venv/bin/activate  # Mac/Linux
+       venv\Scripts\activate     # Windows
 
-python -m venv venv
-source venv/bin/activate  # Mac/Linux
-venv\Scripts\activate     # Windows
+3.	Install Dependencies:
 
-
-	3.	Install Dependencies:
-
-pip install -r requirements.txt
+        pip install -r requirements.txt
 
 
-	4.	Run Migrations:
+4.	Run Migrations:
 
-python manage.py makemigrations
-python manage.py migrate
-
-
-	5.	Create a Superuser (Optional for Admin Access):
-
-python manage.py createsuperuser
+         python manage.py makemigrations
+         python manage.py migrate
 
 
-	6.	Run the Development Server:
+5.	Create a Superuser (Optional for Admin Access):
 
-python manage.py runserver
+         python manage.py createsuperuser
 
 
-	7.	Access the API:
-	•	API Endpoint: http://127.0.0.1:8000/api/movies/
+6.	Run the Development Server:
+
+            python manage.py runserver
+
+
+7.	Access the API:
+	  •	API Endpoint: http://127.0.0.1:8000/api/movies/
 	•	Admin Panel: http://127.0.0.1:8000/admin/
 
 🖥️ Movie List Page Example (HTML)
